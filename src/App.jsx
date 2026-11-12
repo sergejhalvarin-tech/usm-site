@@ -3,6 +3,28 @@ import { Logo } from "./Brand.jsx";
 import { Mascot } from "./Mascot.jsx";
 import { contacts, heroStats, specs, steps, tel } from "./data.js";
 import { OfferProvider, useOffer } from "./Picker.jsx";
+import { Boundary, NearView, NoGL, has3D } from "./Safe.jsx";
+
+const HERO_IMG = `${import.meta.env.BASE_URL}assets/kiln_hero.webp`;
+/* 3D block: only when the device has WebGL 2, mounted when near the viewport, isolated so a failure cannot blank the page */
+function Heavy({ label, fallback, children }) {
+  if (!has3D()) return fallback;
+  return (
+    <Boundary fallback={fallback}>
+      <NearView placeholder={<Skeleton label={label} />}><Suspense fallback={<Skeleton label={label} />}>{children}</Suspense></NearView>
+    </Boundary>
+  );
+}
+function GeoFallback() {
+  const { open } = useOffer();
+  return (
+    <div className="geo-fallback">
+      <div><span className="geo-k">Результаты работы</span><div className="geo-big">40<span>+</span></div><p className="geo-big-l">печей продано нашим клиентам</p></div>
+      <div className="geo-row"><div><strong>РФ</strong><span>все регионы России</span></div><div><strong>Экспорт</strong><span>отправляем и за рубеж</span></div></div>
+      <button className="btn btn-fire" onClick={() => open(["Доставка в ваш регион"])}>Обсудить доставку <span aria-hidden="true">→</span></button>
+    </div>
+  );
+}
 
 const KilnExplorer = lazy(() => import("./KilnExplorer.jsx").then((m) => ({ default: m.KilnExplorer })));
 const DeliveryMap = lazy(() => import("./DeliveryMap.jsx").then((m) => ({ default: m.DeliveryMap })));
@@ -87,14 +109,14 @@ export function App() {
         <section id="equipment" className="section">
           <div className="wrap">
             <SectionHead n="01" title="Печь и оборудование" text="Модель построена по чертежу УП040.003-4. Выберите узел — печь повернётся к нему; внутренние узлы открываются в разрезе." />
-            <Suspense fallback={<Skeleton label="Загружаем модель печи…" />}><KilnExplorer /></Suspense>
+            <Heavy label="Загружаем модель печи…" fallback={<NoGL img={HERO_IMG} title="3D-модель недоступна на этом устройстве" text="Браузер не поддерживает WebGL 2. Откройте сайт в свежем Chrome, Safari или Яндекс Браузере, чтобы покрутить печь и посмотреть узлы." />}><KilnExplorer /></Heavy>
           </div>
         </section>
 
         <section id="process" className="section section-alt">
           <div className="wrap">
             <SectionHead n="02" title="Видимые детали" text="Полный цикл — около 22 часов — за 36 секунд. Это расчёт по физической модели: теплопередача в штабеле, кинетика разложения древесины, горение газа, тяга и автоматика." />
-            <Suspense fallback={<Skeleton label="Загружаем печь в разрезе…" />}><ProcessViz /></Suspense>
+            <Heavy label="Загружаем печь в разрезе…" fallback={<NoGL title="Анимация процесса недоступна на этом устройстве" text="Цикл: розжиг → сушка → термолиз → пиролиз → прокалка → остывание, около 22 часов. Газ из реторт сгорает под ними — печь греет себя сама." />}><ProcessViz /></Heavy>
           </div>
         </section>
 
@@ -115,7 +137,7 @@ export function App() {
         <section id="geo" className="section geo-sec">
           <div className="wrap">
             <SectionHead n="05" title="География поставок" text="Поставляем оборудование по России и за рубеж. Условия доставки согласуем под ваш проект." />
-            <Suspense fallback={<Skeleton label="Загружаем карту…" />}><DeliveryMap /></Suspense>
+            <Heavy label="Загружаем карту…" fallback={<GeoFallback />}><DeliveryMap /></Heavy>
           </div>
         </section>
 
@@ -135,7 +157,7 @@ export function App() {
         </section>
       </main>
       <footer className="footer"><div className="wrap footer-in"><Logo size={20} /><span>Оборудование для производства древесного угля</span><span>© {new Date().getFullYear()}</span></div></footer>
-      <Mascot />
+      <Boundary><Mascot /></Boundary>
     </div>
     </OfferProvider>
   );

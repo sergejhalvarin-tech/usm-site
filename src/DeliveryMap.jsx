@@ -87,7 +87,7 @@ export function DeliveryMap() {
   useEffect(() => {
     const mount = mountRef.current;
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, window.innerWidth < 800 ? 1.5 : 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
     mount.appendChild(renderer.domElement);
     const scene = new THREE.Scene(); scene.background = new THREE.Color(0x090a0c);
