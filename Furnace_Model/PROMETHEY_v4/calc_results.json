@@ -1,0 +1,502 @@
+{
+  "assemblies": {
+    "Фундаментная плита": {
+      "mass_kg": 30151.2,
+      "com_m": [
+        2.882,
+        -0.829,
+        -0.1
+      ],
+      "parts": 5,
+      "in_passport_mass": false,
+      "by_material_kg": {
+        "Бетон": 30151.2
+      }
+    },
+    "Рама и каркас": {
+      "mass_kg": 673.8,
+      "com_m": [
+        0.0,
+        -0.0,
+        1.159
+      ],
+      "parts": 35,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Прокат 09Г2С (швеллер/уголок)": 673.8
+      }
+    },
+    "Корпус (обшивка, внутренний лист)": {
+      "mass_kg": 3307.8,
+      "com_m": [
+        0.0,
+        -0.009,
+        1.061
+      ],
+      "parts": 21,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Сталь 09Г2С, жаровая (без окраски)": 1464.2,
+        "Сталь 09Г2С, окраска графит": 1822.9,
+        "Прокат 09Г2С (швеллер/уголок)": 20.7
+      }
+    },
+    "Теплоизоляция": {
+      "mass_kg": 1015.4,
+      "com_m": [
+        -0.0,
+        0.173,
+        1.79
+      ],
+      "parts": 15,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Керамоволокно иглопробивное 128 кг/м³": 1015.4
+      }
+    },
+    "Под и огнеупорная кладка": {
+      "mass_kg": 3019.2,
+      "com_m": [
+        -0.0,
+        -0.172,
+        0.273
+      ],
+      "parts": 7,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Огнеупорная теплоизоляционная плита": 689.1,
+        "Шамотный кирпич ШБ": 2330.1
+      }
+    },
+    "Стаканы — камеры сгорания Ø1924×12 и топка": {
+      "mass_kg": 4719.0,
+      "com_m": [
+        -0.0,
+        -0.112,
+        1.27
+      ],
+      "parts": 35,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Сталь 09Г2С, жаровая (без окраски)": 4563.4,
+        "Чугун (колосники, колёса)": 65.1,
+        "Прокат 09Г2С (швеллер/уголок)": 90.5
+      }
+    },
+    "Трубы пиролизные ТП200 (поз. 5, 6)": {
+      "mass_kg": 148.0,
+      "com_m": [
+        -0.0,
+        1.102,
+        2.17
+      ],
+      "parts": 8,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Сталь 09Г2С, жаровая (без окраски)": 142.0,
+        "Сигнальная окраска (арматура)": 6.0
+      }
+    },
+    "Реторта №1 (в камере)": {
+      "mass_kg": 1081.0,
+      "com_m": [
+        -1.748,
+        -0.266,
+        1.352
+      ],
+      "parts": 33,
+      "in_passport_mass": false,
+      "by_material_kg": {
+        "Сталь 09Г2С, реторта": 1023.8,
+        "Прокат 09Г2С (швеллер/уголок)": 4.3,
+        "Сталь 09Г2С, жаровая (без окраски)": 30.6,
+        "Чугун (колосники, колёса)": 22.2,
+        "Загрузка (масса задаётся расчётом)": 0.0
+      }
+    },
+    "Двери (ДК011-2, ДС010, ДТ010) и навесы": {
+      "mass_kg": 1027.9,
+      "com_m": [
+        0.534,
+        -2.139,
+        1.35
+      ],
+      "parts": 72,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Сталь 09Г2С, окраска графит": 698.1,
+        "Керамоволокно иглопробивное 128 кг/м³": 121.4,
+        "Резина / уплотнение": 2.9,
+        "Прокат 09Г2С (швеллер/уголок)": 184.1,
+        "Сталь 09Г2С, жаровая (без окраски)": 21.4
+      }
+    },
+    "Крыша и шибер": {
+      "mass_kg": 1082.6,
+      "com_m": [
+        0.004,
+        -0.013,
+        2.659
+      ],
+      "parts": 80,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Сталь 09Г2С, окраска графит": 775.2,
+        "Прокат 09Г2С (швеллер/уголок)": 183.2,
+        "Сталь 09Г2С, жаровая (без окраски)": 10.6,
+        "Сталь, термостойкая краска": 113.5
+      }
+    },
+    "Дымовые трубы и газоходы": {
+      "mass_kg": 916.1,
+      "com_m": [
+        -0.0,
+        -1.195,
+        3.656
+      ],
+      "parts": 20,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Сталь, термостойкая краска": 848.5,
+        "Сталь 09Г2С, жаровая (без окраски)": 58.7,
+        "Запорная арматура": 4.9,
+        "Прокат 09Г2С (швеллер/уголок)": 4.0
+      }
+    },
+    "Система воздуха горения": {
+      "mass_kg": 355.2,
+      "com_m": [
+        -2.195,
+        1.544,
+        0.469
+      ],
+      "parts": 10,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Прокат 09Г2С (швеллер/уголок)": 84.8,
+        "Оцинкованная сталь / кожух изоляции": 225.3,
+        "Электродвигатель": 22.0,
+        "Запорная арматура": 23.1
+      }
+    },
+    "КИП, шкаф управления, лестница": {
+      "mass_kg": 138.9,
+      "com_m": [
+        -2.581,
+        0.602,
+        1.871
+      ],
+      "parts": 29,
+      "in_passport_mass": true,
+      "by_material_kg": {
+        "Сталь 09Г2С, жаровая (без окраски)": 39.7,
+        "Шкаф управления (полый)": 50.4,
+        "Оцинкованная сталь / кожух изоляции": 16.8,
+        "Сталь, термостойкая краска": 1.0,
+        "Прокат 09Г2С (швеллер/уголок)": 31.0
+      }
+    },
+    "Выкатная площадка и лебёдка": {
+      "mass_kg": 884.1,
+      "com_m": [
+        1.775,
+        -4.617,
+        0.396
+      ],
+      "parts": 23,
+      "in_passport_mass": false,
+      "by_material_kg": {
+        "Сталь 09Г2С, жаровая (без окраски)": 267.9,
+        "Прокат 09Г2С (швеллер/уголок)": 556.3,
+        "Электродвигатель": 60.0
+      }
+    },
+    "Реторта №2 (на площадке)": {
+      "mass_kg": 1081.0,
+      "com_m": [
+        1.748,
+        -3.764,
+        1.352
+      ],
+      "parts": 33,
+      "in_passport_mass": false,
+      "by_material_kg": {
+        "Сталь 09Г2С, реторта": 1023.8,
+        "Прокат 09Г2С (швеллер/уголок)": 4.3,
+        "Сталь 09Г2С, жаровая (без окраски)": 30.6,
+        "Чугун (колосники, колёса)": 22.2,
+        "Загрузка (масса задаётся расчётом)": 0.0
+      }
+    },
+    "Сушильная камера": {
+      "mass_kg": 1985.7,
+      "com_m": [
+        5.838,
+        0.126,
+        1.44
+      ],
+      "parts": 37,
+      "in_passport_mass": false,
+      "by_material_kg": {
+        "Сталь 09Г2С, жаровая (без окраски)": 789.7,
+        "Сталь 09Г2С, окраска графит": 665.4,
+        "Керамоволокно иглопробивное 128 кг/м³": 162.2,
+        "Прокат 09Г2С (швеллер/уголок)": 136.0,
+        "Сталь, термостойкая краска": 110.4,
+        "Сигнальная окраска (арматура)": 66.0,
+        "Оцинкованная сталь / кожух изоляции": 22.0,
+        "Шкаф управления (полый)": 25.0,
+        "Электродвигатель": 9.0
+      }
+    },
+    "Шкафы остывания (2 шт.)": {
+      "mass_kg": 2296.3,
+      "com_m": [
+        6.2,
+        -3.846,
+        1.158
+      ],
+      "parts": 28,
+      "in_passport_mass": false,
+      "by_material_kg": {
+        "Сталь 09Г2С, окраска графит": 1887.2,
+        "Резина / уплотнение": 3.8,
+        "Сталь 09Г2С, жаровая (без окраски)": 251.2,
+        "Прокат 09Г2С (швеллер/уголок)": 154.1
+      }
+    },
+    "Дровокол ДГ 360": {
+      "mass_kg": 869.0,
+      "com_m": [
+        9.041,
+        0.378,
+        0.814
+      ],
+      "parts": 12,
+      "in_passport_mass": false,
+      "by_material_kg": {
+        "Прокат 09Г2С (швеллер/уголок)": 308.0,
+        "Сталь 09Г2С, окраска графит": 320.0,
+        "Сталь 09Г2С, жаровая (без окраски)": 45.0,
+        "Сигнальная окраска (арматура)": 86.0,
+        "Электродвигатель": 110.0
+      }
+    }
+  },
+  "kiln_mass_kg": 16403.8,
+  "kiln_com_m": [
+    -0.036,
+    -0.208,
+    1.298
+  ],
+  "retort_mass_kg": 1081.0,
+  "geometry": {
+    "casing_LxWxH_m": [
+      6.0,
+      3.3,
+      2.5
+    ],
+    "overall_height_m": 2.66,
+    "length_with_flue_boxes_m": 7.1,
+    "width_with_O2_pipe_m": 3.519,
+    "shell": {
+      "D_out_mm": 1924,
+      "D_in_mm": 1900,
+      "t_mm": 12,
+      "L_mm": 2900,
+      "axis_z_m": 1.35,
+      "x_m": 1.748
+    },
+    "retort": {
+      "D_out_mm": 1760,
+      "t_mm": 6,
+      "L_mm": 2800
+    },
+    "retort_inner_volume_m3": 6.691,
+    "shell_volume_m3": 8.222,
+    "clearance_radial_mm": 70,
+    "clearance_top_mm": 30,
+    "clearance_bottom_mm": 110,
+    "clearance_length_mm": 100,
+    "gap_shell_to_end_insulation_mm": 135,
+    "gap_shell_to_partition_mm": 276,
+    "pyro_pipe": {
+      "OD_mm": 159,
+      "t_mm": 6,
+      "x_m": 0.703,
+      "from_back_mm": 548,
+      "top_m": 3.444,
+      "stub_z_m": 1.997,
+      "outlet_z_m": 0.845
+    },
+    "chimney_top_m": 7.23,
+    "chimney_d_m": 0.42,
+    "lugs": 4,
+    "casing_outer_area_m2": 66.3
+  },
+  "rigid_body_test": {
+    "RB_Фундамент": {
+      "mass_kg": 30151.2,
+      "displacement_mm_after_4s": 0.0,
+      "type": "PASSIVE"
+    },
+    "RB_Печь": {
+      "mass_kg": 17484.7,
+      "displacement_mm_after_4s": 0.0,
+      "type": "ACTIVE"
+    },
+    "RB_Площадка": {
+      "mass_kg": 884.1,
+      "displacement_mm_after_4s": 0.0,
+      "type": "PASSIVE"
+    },
+    "RB_Реторта_2": {
+      "mass_kg": 1081.0,
+      "displacement_mm_after_4s": 0.0,
+      "type": "ACTIVE"
+    },
+    "RB_Сушилка": {
+      "mass_kg": 1985.7,
+      "displacement_mm_after_4s": 0.01,
+      "type": "ACTIVE"
+    },
+    "RB_Шкафы": {
+      "mass_kg": 2296.3,
+      "displacement_mm_after_4s": 0.0,
+      "type": "ACTIVE"
+    },
+    "RB_Дровокол": {
+      "mass_kg": 869.0,
+      "displacement_mm_after_4s": 13.42,
+      "type": "ACTIVE"
+    }
+  },
+  "calc": {
+    "charge": {
+      "Берёза": {
+        "solid_m3": 4.68,
+        "dry_t": 2.34,
+        "wet_t": 3.12,
+        "char_per_retort_kg": 703,
+        "char_per_cycle_t": 1.41,
+        "mass_yield_dry_pct": 30.0,
+        "cycles_for_25t": 17.8,
+        "cycles_for_41t": 29.2,
+        "hours_per_cycle_25t": 40.5,
+        "hours_per_cycle_41t": 24.7
+      },
+      "Сосна": {
+        "solid_m3": 4.68,
+        "dry_t": 1.87,
+        "wet_t": 2.5,
+        "char_per_retort_kg": 562,
+        "char_per_cycle_t": 1.12,
+        "mass_yield_dry_pct": 30.0,
+        "cycles_for_25t": 22.2,
+        "cycles_for_41t": 36.5,
+        "hours_per_cycle_25t": 32.4,
+        "hours_per_cycle_41t": 19.7
+      },
+      "Лиственница": {
+        "solid_m3": 4.68,
+        "dry_t": 2.44,
+        "wet_t": 3.25,
+        "char_per_retort_kg": 749,
+        "char_per_cycle_t": 1.5,
+        "mass_yield_dry_pct": 30.8,
+        "cycles_for_25t": 16.7,
+        "cycles_for_41t": 27.4,
+        "hours_per_cycle_25t": 43.2,
+        "hours_per_cycle_41t": 26.3
+      }
+    },
+    "heat_balance_GJ_per_cycle_birch": {
+      "water_evaporated_t": 1.56,
+      "Q_evaporation": 4.08,
+      "Q_heat_wood_to_450C": 3.05,
+      "Q_heat_retort_steel": 0.45,
+      "Q_wall_losses_24h": 0.88,
+      "Q_required_total": 8.46,
+      "volatiles_t": 3.27,
+      "Q_pyrolysis_gas_available": 39.2,
+      "autothermal_ratio": 4.6,
+      "startup_firewood_t_estimate": 0.27
+    },
+    "wall_heat_loss": {
+      "T_inside_C": 450.0,
+      "lambda_mean_W_mK": 0.075,
+      "q_W_m2": 204.0,
+      "T_surface_C": 40.4,
+      "area_m2": 66.3,
+      "Q_peak_kW": 13.5
+    },
+    "chimney_draft": {
+      "200C": 28.7,
+      "300C": 36.9,
+      "400C": 42.7
+    },
+    "gas_and_air": {
+      "pyrolysis_gas_kg_s_avg": 0.091,
+      "pipe": "Ø159×6 (ТП200, чертёж)",
+      "gas_velocity_m_s": 6.9,
+      "peak_factor_assumed": 2.0,
+      "gas_velocity_peak_m_s": 13.9,
+      "gas_path_length_m": 1.75,
+      "dp_avg_Pa": 33,
+      "dp_peak_Pa": 132,
+      "air_kg_s": 0.425,
+      "air_m3_h": 1275,
+      "air_velocity_DN200_m_s": 10.7,
+      "blower_power_kW_at_1kPa": 1.18
+    },
+    "thermal_expansion_mm": {
+      "shell_length_2.9m_dT600": 20.9,
+      "shell_diameter_dT600": 13.9,
+      "retort_length_dT435": 14.6,
+      "retort_diameter_dT435": 9.2,
+      "pyro_pipe_vertical_2.5m_dT400": 12.0
+    },
+    "lifting": {
+      "mass_t": 16.4,
+      "sling_angle_deg": 60,
+      "F_per_lug_kN": 46.5,
+      "net_section_mm2": 5100,
+      "stress_MPa": 9.1,
+      "yield_09G2S_MPa": 325,
+      "safety_factor": 35.7
+    },
+    "retort_handling": {
+      "retort_steel_kg": 1081,
+      "charge_wet_birch_kg": 3120,
+      "loaded_kg": 4201,
+      "wheel_load_kN": 10.3,
+      "rolling_coeff": 0.015,
+      "push_force_kN": 0.62,
+      "after_cycle_kg": 1784
+    },
+    "foundation": {
+      "operating_mass_t": 24.8,
+      "contact_area_m2": 19.8,
+      "pressure_kPa": 12.3,
+      "com_height_m": 1.3,
+      "tip_angle_deg": 48.0
+    },
+    "dryer": {
+      "solid_m3": 3.85,
+      "dry_mass_t": 1.92,
+      "moisture_from_to_pct": [
+        40,
+        25
+      ],
+      "water_removed_t": 0.64,
+      "Q_GJ": 3.34,
+      "Q_avg_kW_over_24h": 38.6,
+      "flue_heat_available_kW": 102.2
+    },
+    "drawing_stage4": {
+      "model_steel_structure_kg": 9752,
+      "drawing_mass_kg": 7910.29,
+      "note": "Каркас + обшивка + двери + стаканы + пиролизные трубы, без изоляции, кирпича, крыши и навесного оборудования"
+    }
+  }
+}
