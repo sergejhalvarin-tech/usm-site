@@ -41,6 +41,12 @@ function sign(text, w = 2.2, h = 1.1) {
   return new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: t, roughness: 0.6 }));
 }
 
+/* image-based light strength per material (scene.environmentIntensity only exists from r163) */
+export function tuneEnv(root, scene) {
+  const k = scene.userData.envIntensity ?? 1;
+  root.traverse((o) => { const ms = o.material ? (Array.isArray(o.material) ? o.material : [o.material]) : []; ms.forEach((m) => { if ("envMapIntensity" in m) m.envMapIntensity = k; }); });
+}
+
 export function workshop(scene, renderer) {
   const { W, D, H } = HALL, g = new THREE.Group(); g.name = "Цех";
   const bg = 0xd5d9dd;
@@ -50,7 +56,7 @@ export function workshop(scene, renderer) {
   /* soft image-based light so steel and the floor get believable reflections */
   const pm = new THREE.PMREMGenerator(renderer);
   scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture;
-  scene.environmentIntensity = 0.4;
+  scene.userData.envIntensity = 0.4;            // applied per material (works on three r162 / WebGL 1 too)
   renderer.toneMappingExposure = 1.0;
   pm.dispose();
 
@@ -186,6 +192,7 @@ export function workshop(scene, renderer) {
   const c1 = sign("C1", 1.3, 0.65); c1.position.set(-W / 2 + 0.06, 5.6 + FY, 6); c1.rotation.y = Math.PI / 2; g.add(c1);
 
   scene.add(g);
+  tuneEnv(g, scene);
   return g;
 }
 

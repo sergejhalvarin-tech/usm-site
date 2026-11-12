@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { equipment } from "./data.js";
 import { isCut, loadKiln, makeRenderer, watch } from "./kilnModel.js";
-import { markZone, workshop } from "./workshop.js";
+import { markZone, tuneEnv, workshop } from "./workshop.js";
 
 const ACCENT = new THREE.Color(0xff6a1a);
 const flat = equipment.flatMap((g) => g.items.map((it) => ({ ...it, group: g.group })));
@@ -36,7 +36,7 @@ export function KilnExplorer() {
 
     loadKiln().then((k) => {
       if (disposed) return;
-      kiln = k; scene.add(kiln); markZone(scene, kiln);
+      kiln = k; scene.add(kiln); markZone(scene, kiln); tuneEnv(kiln, scene);
       kiln.traverse((o) => { if (o.isMesh) { o.castShadow = o.receiveShadow = true; } if (isCut(o)) cutParts.push(o); });
       kiln.updateMatrixWorld(true);
       new THREE.Box3().setFromObject(kiln).getCenter(kc);

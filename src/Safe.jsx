@@ -1,12 +1,17 @@
 import { Component, useEffect, useRef, useState } from "react";
 
-/* WebGL 2 is required by three.js r180. `?no3d` forces the fallback (for testing). */
+/* three r162 runs on WebGL 2 and falls back to WebGL 1. `?no3d` forces the fallback (for testing). */
+let gl3D = null;
 export function has3D() {
+  if (gl3D !== null) return gl3D;
   try {
-    if (new URLSearchParams(location.search).has("no3d")) return false;
+    if (new URLSearchParams(location.search).has("no3d")) return (gl3D = false);
     const c = document.createElement("canvas");
-    return !!(window.WebGL2RenderingContext && c.getContext("webgl2"));
-  } catch { return false; }
+    const ctx = c.getContext("webgl2") || c.getContext("webgl") || c.getContext("experimental-webgl");
+    ctx?.getExtension("WEBGL_lose_context")?.loseContext();          // free the probe (iOS limits GL contexts)
+    gl3D = !!ctx;
+  } catch { gl3D = false; }
+  return gl3D;
 }
 
 /* One broken block must never blank the whole page: catch it and show a fallback instead. */

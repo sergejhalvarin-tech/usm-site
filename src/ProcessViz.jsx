@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { COMP, CYCLE_HOURS, LAYERS, PHASES, SERIES, SUMMARY, phaseAt, state } from "./process.js";
 import { isCut, loadKiln, makeRenderer, watch } from "./kilnModel.js";
-import { markZone, workshop } from "./workshop.js";
+import { markZone, tuneEnv, workshop } from "./workshop.js";
 
 const CYCLE = 36;                         // seconds on screen for one full batch (≈ 22 h of process time)
 const V = (x, y, z) => new THREE.Vector3(x, y, z);
@@ -149,7 +149,7 @@ export function ProcessViz() {
         if (isCut(o)) o.visible = false;
         if (/^Стакан_(камера|кольцо|днище)/.test(o.name)) { o.material = o.material.clone(); o.material.emissive = new THREE.Color(0xff4a10); shellMats.push(o.material); }
       });
-      scene.add(k); markZone(scene, k); setReady(true);
+      scene.add(k); markZone(scene, k); tuneEnv(scene, scene); setReady(true);
     });
     const light = new THREE.PointLight(0xff7a2a, 0, 6, 1.6); light.position.set(0, 0.9, 0); scene.add(light);
     const light2 = new THREE.PointLight(0xff7a2a, 0, 6, 1.6); light2.position.set(1.2, 0.9, -0.3); scene.add(light2);
